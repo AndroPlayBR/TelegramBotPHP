@@ -138,7 +138,7 @@ class Telegram
     if ($update && is_array($this->updates['result'] ?? null) && ($lastElement = end($this->updates['result'])) !== false) {
         $content['offset'] = $lastElement['update_id'] + 1;
         $content['limit'] = 1;
-        $this->endpoint(FUNCTION, $content);
+        $this->endpoint(__FUNCTION__, $content);
 }
 
         return $this->updates;
